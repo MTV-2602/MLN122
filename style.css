@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,500;1,6..72,700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  /* --- Bảng màu chính (Dark Red-Black Theme) --- */
-  --bg: #0b0808;
-  --bg-alt: #131010;
-  --bg-card: #181414;
-  --text: #fdfcfb;
-  --text-soft: #e2dad5;
-  --text-muted: #aba4a0;
-  --line: rgba(185, 28, 28, 0.16);
-  --surface: rgba(185, 28, 28, 0.08);
-  --surface-strong: rgba(185, 28, 28, 0.16);
+  /* --- Bảng màu chính (Dark Red & Gold Flag Theme) --- */
+  --bg: #1c0202;       /* Đỏ đen sẫm màu cờ nền tối */
+  --bg-alt: #2a0505;   /* Đỏ sẫm vừa */
+  --bg-card: #3a0808;  /* Đỏ card sẫm nổi bật */
+  --text: #ffffff;     /* Chữ trắng sáng tăng tương phản tối đa */
+  --text-soft: #ffe4e4;/* Chữ hồng nhạt dễ đọc */
+  --text-muted: #dcaaaa;/* Chữ ghi hồng */
+  --line: rgba(255, 215, 0, 0.25); /* Đường viền vàng sao */
+  --surface: rgba(218, 37, 29, 0.15);
+  --surface-strong: rgba(255, 215, 0, 0.15);
 
   /* --- Bảng màu giấy (Paper Theme - Xen kẽ) --- */
-  --paper: #fdfaf4;
-  --paper-soft: #f4edd9;
-  --paper-card: #f9f6ef;
-  --ink: #211514;
-  --ink-soft: #5d4c4a;
-  --dark-line: rgba(93, 76, 74, 0.12);
+  --paper: #fffcf5;
+  --paper-soft: #fbf5e6;
+  --paper-card: #fdfaf0;
+  --ink: #1f1110;
+  --ink-soft: #4c3735;
+  --dark-line: rgba(218, 37, 29, 0.15);
 
-  /* --- Màu điểm nhấn --- */
-  --red: #b91c1c;      /* Đỏ cách mạng */
-  --amber: #d97706;    /* Vàng Đảng/Nhà nước */
-  --teal: #0f766e;     /* Xanh mòng két điều tiết */
-  --orange: #c2410c;   /* Cam cảnh báo nguy cơ */
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  /* --- Màu điểm nhấn (Cờ đỏ sao vàng) --- */
+  --red: #da251d;      /* Đỏ cờ Việt Nam */
+  --amber: #ffcd00;    /* Vàng sao vàng đặc trưng */
+  --teal: #ff9f00;     /* Màu vàng cam ấm áp */
+  --orange: #e02424;   /* Đỏ đậm cảnh báo */
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
 
   /* --- Typography --- */
   --font-label: "Inter", system-ui, sans-serif;
@@ -1123,11 +1123,16 @@ section[id] {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
+  color: var(--text) !important; /* Force high-contrast white text in dark theme */
+}
+
+.theme-paper .accordion-title {
+  color: var(--ink) !important;  /* Dark ink in paper theme */
 }
 
 .accordion-icon {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: var(--amber) !important; /* Gold plus/minus sign */
   transition: transform 0.3s ease;
   font-weight: bold;
 }
@@ -1360,6 +1365,43 @@ body, section, .bento-card, .comparison-column, .accordion-item, .tool-table-wra
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Nav Actions Group */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+/* Present Button */
+.present-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bg);
+  background: var(--red);
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.4);
+}
+
+.present-btn:hover {
+  background: #a01515;
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(185, 28, 28, 0.55);
+}
+
+.present-btn svg {
+  flex-shrink: 0;
+}
+
 /* Theme Toggle Button */
 .theme-toggle-btn {
   display: flex;
@@ -1372,7 +1414,6 @@ body, section, .bento-card, .comparison-column, .accordion-item, .tool-table-wra
   color: var(--text-soft);
   background: rgba(255, 255, 255, 0.04);
   transition: var(--transition-smooth);
-  margin-left: 8px;
 }
 
 .theme-toggle-btn:hover {
@@ -1482,3 +1523,309 @@ body.theme-forced-paper .nav-brand {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ============================================
+   PRESENTATION MODE STYLES
+   ============================================ */
+
+/* Body in presentation mode */
+body.presentation-mode {
+  overflow: hidden;
+}
+
+body.presentation-mode .noise-overlay {
+  display: none;
+}
+
+body.presentation-mode .back-to-top {
+  display: none;
+}
+
+body.presentation-mode .site-footer {
+  display: none;
+}
+
+body.presentation-mode .pill-nav {
+  animation: none;
+}
+
+/* Slides hidden by default in presentation mode */
+body.presentation-mode main > * {
+  display: none !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Active slide visible — block so content starts at top and can scroll */
+body.presentation-mode main > *.slide-active {
+  display: block !important;
+  opacity: 1;
+  pointer-events: all;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Override snap-section padding in presentation mode */
+body.presentation-mode main > .snap-section.slide-active {
+  padding-top: 76px;
+  padding-bottom: 90px;
+  min-height: unset;
+}
+
+/* Hero section in presentation mode */
+body.presentation-mode main > header.slide-active {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  min-height: unset;
+}
+
+/* Quote banner in presentation mode */
+body.presentation-mode main > .quote-banner.slide-active {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 24px 90px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Controller Bar */
+.slide-controller {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 0 24px 16px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.presentation-mode .slide-controller {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-controller-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(11, 8, 8, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(185, 28, 28, 0.22);
+  border-radius: 999px;
+  padding: 10px 20px;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.slide-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(185, 28, 28, 0.12);
+  border: 1px solid rgba(185, 28, 28, 0.25);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.slide-nav-btn:hover {
+  background: var(--red);
+  color: var(--bg);
+  transform: scale(1.08);
+  border-color: var(--red);
+}
+
+.slide-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.slide-counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 160px;
+  justify-content: center;
+}
+
+#slideCurrentNum {
+  color: var(--red);
+  font-size: 1.2rem;
+}
+
+.slide-counter-sep {
+  color: var(--text-muted);
+}
+
+#slideTotalNum {
+  color: var(--text-muted);
+}
+
+.slide-counter-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding-left: 10px;
+  border-left: 1px solid rgba(185, 28, 28, 0.25);
+  max-width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.slide-exit-btn {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  margin-left: 8px;
+}
+
+.slide-exit-btn:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Present mode – pill nav becomes minimal */
+body.presentation-mode .pill-nav {
+  top: 16px;
+}
+
+body.presentation-mode .nav-links {
+  display: none;
+}
+
+/* Ghost btn style update */
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 12px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-label);
+  transition: var(--transition-smooth);
+}
+
+.ghost-btn:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* Presenter badge shown on each slide in presentation mode */
+.slide-presenter-badge {
+  display: none;
+}
+
+body.presentation-mode .slide-presenter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: fixed;
+  top: 76px;
+  right: 24px;
+  z-index: 150;
+  background: rgba(11, 8, 8, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(185, 28, 28, 0.3);
+  border-radius: 999px;
+  padding: 5px 12px 5px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  animation: slideIn 0.35s ease;
+}
+
+.slide-presenter-badge .presenter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+/* Presenter info in controller */
+.slide-presenter-info {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-right: 10px;
+  border-right: 1px solid rgba(185, 28, 28, 0.25);
+  white-space: nowrap;
+}
+
+.slide-presenter-info:empty {
+  display: none;
+}
+
+/* Responsive Slide 7 layout */
+@media (max-width: 992px) {
+  #cam-on .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  #cam-on .container img {
+    max-width: 160px !important;
+  }
+}
+
+.slide-presenter-info:empty {
+  display: none;
+}
+

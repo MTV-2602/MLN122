@@ -1,4 +1,4 @@
-<!DOCTYPE html><!-- Deploy trigger -->
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
@@ -10,202 +10,148 @@
 <body class="theme-dark">
   <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- Floating Pill/Capsule Navigation Bar -->
+  <!-- Navigation -->
   <nav class="pill-nav" id="pillNav" aria-label="Điều hướng chính">
     <div class="pill-nav-inner">
-      <a class="nav-brand" href="#hero">Mác - Lênin</a>
+      <a class="nav-brand" href="#hero">Mác – Lênin</a>
       <div class="nav-links">
-        <a href="#ly-luan">Lý thuyết</a>
-        <a href="#dqnn">ĐQ Nhà nước</a>
-        <a href="#ban-chat">Bản chất</a>
-        <a href="#tac-dong">Tác động</a>
-        <a href="#thuc-tien-vn">Thực tiễn VN</a>
-        <a href="#han-che-vn">Hạn chế & Nguy cơ</a>
-        <a href="#cong-cu">Kiểm chứng AI</a>
+        <a href="#hoi">Phần 1: Lý luận</a>
+        <a href="#thuc-tien-vn">Phần 2: So sánh</a>
+        <a href="#han-che-vn">Phần 3: Vai trò &amp; Nguy cơ</a>
+        <a href="#bao-cao">Báo cáo &amp; Tài liệu</a>
       </div>
-      <!-- Nút chuyển theme lơ lửng toàn cục -->
-      <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển đổi giao diện Sáng/Tối" aria-label="Chuyển giao diện">
-        <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
+      <div class="nav-actions">
+        <button class="present-btn" id="presentBtn" title="Chế độ trình chiếu" aria-label="Bắt đầu trình chiếu">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Trình chiếu
+        </button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển đổi giao diện" aria-label="Chuyển giao diện">
+          <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
   <main>
-    <!-- CENTERED HERO SECTION -->
-    <header id="hero" class="hero-section">
+
+    <!-- ============================================================
+         SLIDE 1: GIỚI THIỆU
+    ============================================================ -->
+    <header id="hero" class="hero-section snap-slide" data-slide-title="Giới thiệu" data-presenter="">
       <div class="hero-bg" aria-hidden="true">
-        <img src="images/hcmc_skyline.png" alt="" />
+        <img src="images/hcmc_skyline.png" alt="Thành phố Hồ Chí Minh Skyline" />
       </div>
       <div class="hero-content reveal">
-        <span class="badge badge-red" style="margin-bottom: 16px;">Chuyên đề học thuật</span>
-        <h1 class="hero-title">
+        <span class="section-label" style="margin-bottom: 16px;">Chuyên đề · Kinh tế Chính trị Mác – Lênin</span>
+        <h1 class="hero-title" style="color: var(--amber);">
           Độc quyền
-          <span>và độc quyền nhà nước</span>
+          <span style="color: var(--text);">và Độc quyền Nhà nước</span>
         </h1>
         <p class="hero-subtitle">
-          Khảo sát lý luận kinh tế chính trị Mác – Lênin về sự hình thành độc quyền và phân tích thực tiễn vai trò, nguy cơ của doanh nghiệp nhà nước tại Việt Nam hiện nay.
+          Lý thuyết kinh tế chính trị Mác – Lênin về độc quyền, độc quyền nhà nước và thực tiễn tập đoàn kinh tế nhà nước tại Việt Nam.
         </p>
         <div class="hero-actions">
-          <a class="primary-btn" href="#ly-luan">Khám phá lý luận</a>
-          <a class="ghost-btn" href="#cong-cu">Báo cáo & Kiểm chứng AI</a>
+          <a class="primary-btn" href="#hoi">Xem nội dung</a>
+          <button class="ghost-btn" id="heroStartPresent" style="border-color: var(--amber); color: var(--amber);">▶ Trình chiếu</button>
         </div>
       </div>
-
-      <!-- Centered Cards Grid -->
       <div class="hero-cards-grid container reveal">
-        <div class="hero-mini-card">
-          <span>Quy luật tất yếu</span>
-          <strong>Tập trung sản xuất tạo ra liên minh độc quyền</strong>
+        <div class="hero-mini-card" style="border-color: var(--line);">
+          <span style="color: var(--amber);">PHẦN 1</span>
+          <strong>Lý luận về Độc quyền &amp; Độc quyền Nhà nước</strong>
         </div>
-        <div class="hero-mini-card">
-          <span>Cơ chế giá cả</span>
-          <strong>Áp đặt giá bán cao và giá mua thấp để tối đa hóa lợi nhuận</strong>
+        <div class="hero-mini-card" style="border-color: var(--line);">
+          <span style="color: var(--amber);">PHẦN 2</span>
+          <strong>So sánh Lý luận với Thực tiễn Việt Nam</strong>
         </div>
-        <div class="hero-mini-card">
-          <span>Độc quyền nhà nước</span>
-          <strong>Sự cộng hưởng giữa sức mạnh chính trị & kinh tế tư nhân</strong>
+        <div class="hero-mini-card" style="border-color: var(--line);">
+          <span style="color: var(--amber);">PHẦN 3</span>
+          <strong>Vai trò &amp; Nguy cơ của Doanh nghiệp Nhà nước</strong>
         </div>
       </div>
     </header>
 
-    <!-- SECTION 1: LÝ THUYẾT ĐỘC QUYỀN (Alternating Z-Layout, Paper Theme) -->
-    <section id="ly-luan" class="snap-section theme-paper">
+    <!-- ============================================================
+         SLIDE 2: PHẦN 1: LÝ LUẬN VỀ ĐỘC QUYỀN (ĐIỂM 1 - 4)
+    ============================================================ -->
+    <section id="hoi" class="snap-section snap-slide theme-paper" data-slide-title="Lý luận (Điểm 1–4)" data-presenter="Hội">
       <div class="container">
         <div class="section-heading center reveal">
-          <span class="section-label">01 · Lý thuyết độc quyền</span>
-          <h2>2. Lý thuyết độc quyền trong nền KTTT</h2>
-          <p>
-            Phân tích bản chất, nguyên nhân hình thành và cơ chế hoạt động của các liên minh độc quyền.
-          </p>
+          <span class="section-label" style="color: var(--red);">Phần 1 — Điểm 1 đến 4</span>
+          <h2 style="color: var(--ink);">Lý thuyết về Độc quyền và Độc quyền Nhà nước</h2>
+          <p style="color: var(--ink-soft);">Bản chất, nguyên nhân hình thành, cơ chế giá cả và khái niệm độc quyền nhà nước theo quan điểm Mác – Lênin.</p>
         </div>
 
-        <div class="theory-grid">
-          <!-- Card 1: Bản chất -->
-          <div class="theory-card reveal">
-            <span class="badge badge-red" style="align-self: flex-start; margin-bottom: 8px;">Lý thuyết</span>
-            <h3 class="theory-card-title">1. Độc quyền trong nền KTTT</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 8px;">
-              Là sự liên minh giữa các doanh nghiệp lớn, chi phối sản xuất, tiêu thụ hàng hóa và áp đặt giá cả nhằm thu lợi nhuận độc quyền cao.
-            </p>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 8px; font-style: italic; font-weight: 500;">
-              Theo quan điểm Mác - Lênin, tự do cạnh tranh dẫn đến tập trung sản xuất, và khi tập trung sản xuất phát triển đến một mức độ nhất định thì sẽ hình thành độc quyền.
-            </p>
-            <div class="theory-card-img-wrap">
-              <img src="images/monopoly_factory.png" alt="Sản xuất công nghiệp quy mô lớn đại diện độc quyền" />
-              <div class="concept-badge-card">Tập trung sản xuất</div>
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: start;">
+          <!-- Cột Trái: Điểm 1, 2 & Hình minh họa -->
+          <div>
+            <!-- Điểm 1: Tích tụ & Tập trung sản xuất -->
+            <div class="reveal" style="margin-bottom: 16px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+                <span class="badge badge-red" style="background: var(--red); color: white; padding: 3px 8px; border-radius: 99px; font-size: 0.7rem; font-weight: bold;">Điểm 1</span>
+                <h3 style="font-family:var(--font-display); font-size:1rem; color:var(--ink); margin:0;">Tập trung sản xuất dẫn đến độc quyền</h3>
+              </div>
+              <div style="background:var(--paper-card); border:1px solid var(--dark-line); border-radius:12px; padding:12px 16px;">
+                <p style="font-size:0.82rem; color:var(--ink-soft); line-height:1.5; margin:0;">
+                  Cạnh tranh tự do thúc đẩy tích tụ và tập trung sản xuất. Khi quy mô sản xuất cực lớn, các doanh nghiệp dễ dàng liên minh, thỏa thuận để tránh thiệt hại cạnh tranh, hình thành tổ chức độc quyền.
+                </p>
+              </div>
+            </div>
+
+            <!-- Điểm 2: Khái niệm độc quyền -->
+            <div class="reveal" style="margin-bottom: 16px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+                <span class="badge badge-red" style="background: var(--red); color: white; padding: 3px 8px; border-radius: 99px; font-size: 0.7rem; font-weight: bold;">Điểm 2</span>
+                <h3 style="font-family:var(--font-display); font-size:1rem; color:var(--ink); margin:0;">Độc quyền trong nền kinh tế thị trường</h3>
+              </div>
+              <div style="background:var(--paper-card); border:1px solid var(--dark-line); border-radius:12px; padding:12px 16px; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center;">
+                <div>
+                  <p style="font-size:0.82rem; color:var(--ink-soft); line-height:1.5; margin-bottom:8px;">
+                    Sự liên minh giữa các doanh nghiệp lớn nhằm chi phối việc sản xuất, tiêu thụ hàng hóa và áp đặt giá cả để thu lợi nhuận độc quyền cao.
+                  </p>
+                  <blockquote style="font-style:italic; font-size:0.78rem; color:var(--red); border-left:3px solid var(--red); padding-left:10px; margin:0; line-height:1.4;">
+                    "Tự do cạnh tranh sinh ra tập trung sản xuất dẫn tới độc quyền." — V.I. Lênin
+                  </blockquote>
+                </div>
+                <div style="width: 70px; height: 90px; border-radius: 6px; overflow: hidden; border: 1px solid var(--dark-line); flex-shrink: 0;">
+                  <img src="images/mac.jpg" alt="Karl Marx" style="width:100%; height:100%; object-fit:cover;" />
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Card 2: Nguyên nhân -->
-          <div class="theory-card reveal">
-            <span class="badge badge-teal" style="align-self: flex-start; margin-bottom: 8px;">Nguyên nhân</span>
-            <h3 class="theory-card-title">2. Nguyên nhân hình thành</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 8px;">
-              Độc quyền hình thành khách quan từ 3 động lực chính trong nền kinh tế thị trường:
-            </p>
-            <ul class="detail-list" style="margin-bottom: 8px; font-size: 0.8rem;">
-              <li><strong>Lực lượng sản xuất:</strong> Tiến bộ KH-KT làm xuất hiện máy móc mới, đòi hỏi vốn lớn, quy mô lớn.</li>
-              <li><strong>Cạnh tranh gay gắt:</strong> Đào thải doanh nghiệp yếu, ép doanh nghiệp lớn liên kết, sáp nhập để tồn tại.</li>
-              <li><strong>Khủng hoảng & Tín dụng:</strong> Loại bỏ đơn vị yếu kém; tín dụng thúc đẩy quá trình tập trung vốn.</li>
-            </ul>
-            <div class="theory-card-img-wrap">
-              <img src="images/tech_revolution.png" alt="Tiến bộ kỹ thuật và khoa học thế kỷ 19" />
-              <div class="concept-badge-card" style="background: var(--teal);">Lực lượng sản xuất</div>
+          <!-- Cột Phải: Điểm 3, 4 & Ảnh tài liệu -->
+          <div>
+            <!-- Điểm 3: Nguyên nhân hình thành & Giá cả -->
+            <div class="reveal" style="margin-bottom: 16px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+                <span class="badge badge-teal" style="background: var(--red); color: white; padding: 3px 8px; border-radius: 99px; font-size: 0.7rem; font-weight: bold;">Điểm 3</span>
+                <h3 style="font-family:var(--font-display); font-size:1rem; color:var(--ink); margin:0;">Nguyên nhân hình thành &amp; Giá cả độc quyền</h3>
+              </div>
+              <div style="background:var(--paper-card); border:1px solid var(--dark-line); border-radius:12px; padding:12px 16px;">
+                <ul class="detail-list" style="font-size:0.8rem; color:var(--ink-soft); margin:0; padding-left:14px;">
+                  <li style="margin-bottom: 4px;"><strong>Nguyên nhân:</strong> Phát triển lực lượng sản xuất, tiến bộ khoa học - kỹ thuật, cạnh tranh khốc liệt và hệ thống tín dụng cổ phần.</li>
+                  <li><strong>Giá cả độc quyền:</strong> Bán hàng hóa với giá cao và mua nguyên liệu, sức lao động với giá thấp để chiếm đoạt thặng dư.</li>
+                </ul>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 3: Giá cả & Lợi nhuận -->
-          <div class="theory-card reveal">
-            <span class="badge badge-amber" style="align-self: flex-start; margin-bottom: 8px;">Giá cả & Lợi nhuận</span>
-            <h3 class="theory-card-title">3. Giá cả và lợi nhuận</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 8px;">
-              Các tổ chức độc quyền áp đặt cơ chế giá cả để thu lợi nhuận độc quyền cao:
-            </p>
-            <ul class="detail-list" style="margin-bottom: 8px; font-size: 0.8rem;">
-              <li><strong>Áp đặt giá cả:</strong> Áp đặt giá bán cao khi bán hàng; Giá mua thấp khi mua nguyên liệu, sức lao động.</li>
-              <li><strong>Nguồn gốc lợi nhuận:</strong> Chủ yếu từ lao động thặng dư của công nhân và sự bóc lột người lao động.</li>
-            </ul>
-            <div class="theory-card-img-wrap">
-              <img src="images/karl_marx_kapital.png" alt="Karl Marx viết Tư bản luận nghiên cứu thặng dư" />
-              <div class="concept-badge-card" style="background: var(--amber);">Giá trị thặng dư</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMMERSIVE QUOTE BANNER (Bức tường tư tưởng) -->
-    <section class="quote-banner">
-      <div class="quote-banner-bg" aria-hidden="true"></div>
-      <div class="container reveal">
-        <span class="quote-icon-large">“</span>
-        <blockquote class="quote-text-center">
-          Tự do cạnh tranh dẫn đến tập trung sản xuất, và khi tập trung sản xuất phát triển đến một mức độ nhất định thì sẽ hình thành độc quyền.
-        </blockquote>
-        <div class="quote-author-center">— V.I. Lênin</div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: ĐỘC QUYỀN NHÀ NƯỚC (Bento Grid Layout, Dark Theme) -->
-    <section id="dqnn" class="snap-section theme-dark">
-      <div class="container">
-        <div class="section-heading center reveal">
-          <span class="section-label">02 · Độc quyền Nhà nước</span>
-          <h2>3. Độc quyền Nhà nước trong nền kinh tế thị trường</h2>
-          <p>
-            Hình thức kết hợp giữa sức mạnh chính trị của bộ máy nhà nước và sức mạnh kinh tế của độc quyền tư nhân.
-          </p>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Card 1: Khái niệm (Large) -->
-          <div class="bento-card bento-card-large reveal">
-            <div class="bento-card-num">01</div>
-            <h3><span style="color: var(--red);">■</span> 4. Độc quyền nhà nước</h3>
-            <p style="font-size: 0.92rem; line-height: 1.5; margin-bottom: 8px;">
-              Là hình thức độc quyền trong đó nhà nước nắm giữ hoặc kiểm soát những lĩnh vực then chốt của nền kinh tế nhằm duy trì sức mạnh kinh tế, chính trị và xã hội.
-            </p>
-          </div>
-
-          <!-- Card 2: Cơ sở kết hợp (Highlight) -->
-          <div class="bento-card bento-card-highlight reveal">
-            <div class="bento-card-num">02</div>
-            <h3><span style="color: var(--amber);">■</span> Cơ sở kết hợp</h3>
-            <p style="font-size: 0.84rem; line-height: 1.45; margin-bottom: 8px;">
-              Trong chủ nghĩa tư bản, độc quyền nhà nước hình thành trên cơ sở kết hợp giữa: Sức mạnh của nhà nước, Độc quyền tư nhân, Độc quyền nhóm, và Tư bản tài chính.
-            </p>
-          </div>
-
-          <!-- Card 3: Nguyên nhân hình thành (Full Width) -->
-          <div class="bento-card bento-card-full reveal">
-            <div class="bento-card-num">03</div>
-            <h3 style="margin-bottom: 12px; font-size: 1.1rem;"><span style="color: var(--teal);">■</span> 5. Nguyên nhân hình thành độc quyền nhà nước</h3>
-            <div style="display: grid; grid-template-cols: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
-              <div>
-                <strong style="color: var(--amber); display: block; margin-bottom: 4px; font-size: 0.85rem;">1. Sản xuất tập trung quy mô lớn</strong>
-                <p style="font-size: 0.8rem; color: var(--text-soft); line-height: 1.4;">
-                  Sản xuất phát triển ở quy mô lớn, cần có sự điều tiết từ một trung tâm, vì vậy nhà nước phải can thiệp vào kinh tế.
-                </p>
+            <!-- Điểm 4: Độc quyền nhà nước -->
+            <div class="reveal" style="margin-bottom: 16px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+                <span class="badge badge-red" style="background: var(--red); color: white; padding: 3px 8px; border-radius: 99px; font-size: 0.7rem; font-weight: bold;">Điểm 4</span>
+                <h3 style="font-family:var(--font-display); font-size:1rem; color:var(--ink); margin:0;">Độc quyền Nhà nước &amp; Cơ sở kết hợp</h3>
               </div>
-              <div>
-                <strong style="color: var(--amber); display: block; margin-bottom: 4px; font-size: 0.85rem;">2. Ngành cần tư nhân không đầu tư</strong>
-                <p style="font-size: 0.8rem; color: var(--text-soft); line-height: 1.4;">
-                  Một số ngành (năng lượng, giao thông, giáo dục, nghiên cứu cơ bản) vốn lớn, thu hồi chậm, lợi nhuận thấp nên nhà nước phải đảm nhận.
-                </p>
-              </div>
-              <div>
-                <strong style="color: var(--amber); display: block; margin-bottom: 4px; font-size: 0.85rem;">3. Độc quyền tư nhân tăng phân hóa</strong>
-                <p style="font-size: 0.8rem; color: var(--text-soft); line-height: 1.4;">
-                  Sự thống trị độc quyền tư nhân làm mâu thuẫn xã hội gay gắt. Nhà nước phải đưa ra chính sách xã hội (trợ cấp, phúc lợi...) để ổn định.
-                </p>
-              </div>
-              <div>
-                <strong style="color: var(--amber); display: block; margin-bottom: 4px; font-size: 0.85rem;">4. Kinh tế quốc tế phát triển</strong>
-                <p style="font-size: 0.8rem; color: var(--text-soft); line-height: 1.4;">
-                  Sự mở rộng liên minh độc quyền quốc tế gây xung đột lợi ích quốc gia, buộc nhà nước tham gia điều tiết quan hệ kinh tế và quốc tế.
-                </p>
+              <div style="background:var(--paper-card); border:1px solid var(--dark-line); border-radius:12px; padding:12px 16px; display: grid; grid-template-columns: 1fr 100px; gap: 12px; align-items: center;">
+                <div style="font-size:0.78rem; color:var(--ink-soft); line-height:1.45;">
+                  <strong>Khái niệm:</strong> Kết hợp sức mạnh kinh tế độc quyền tư nhân với sức mạnh chính trị của nhà nước.
+                  <br><strong>Cơ sở kết hợp:</strong> Liên kết nhân sự giữa các tài phiệt và giới chức chính quyền.
+                </div>
+                <div style="width: 100px; height: 75px; border-radius: 6px; overflow: hidden; border: 1px solid var(--dark-line); flex-shrink: 0;">
+                  <img src="images/karl_marx_kapital.png" alt="Karl Marx Kapital" style="width:100%; height:100%; object-fit:cover;" />
+                </div>
               </div>
             </div>
           </div>
@@ -213,377 +159,347 @@
       </div>
     </section>
 
-    <!-- SECTION 3: BẢN CHẤT ĐỘC QUYỀN NHÀ NƯỚC (Horizontal Cards Row, Paper Theme) -->
-    <section id="ban-chat" class="snap-section theme-paper">
+    <!-- ============================================================
+         SLIDE 3: PHẦN 1: BẢO — ĐIỂM 5–8 (NGUYÊN NHÂN, BẢN CHẤT & TÁC ĐỘNG)
+    ============================================================ -->
+    <section id="bao" class="snap-section snap-slide theme-dark" data-slide-title="Lý luận (Điểm 5–8)" data-presenter="Bảo">
       <div class="container">
         <div class="section-heading center reveal">
-          <span class="section-label">03 · Bản chất Độc quyền Nhà nước</span>
-          <h2>6. Bản chất của ĐQNN trong Chủ nghĩa Tư bản</h2>
-          <p>
-            Độc quyền nhà nước trong chủ nghĩa tư bản nhằm phục vụ lợi ích của các tổ chức độc quyền tư nhân và duy trì sự tồn tại của chủ nghĩa tư bản.
-          </p>
+          <span class="section-label" style="color: var(--amber);">Phần 1 (Tiếp theo) — Điểm 5 đến 8</span>
+          <h2>Nguyên nhân, Bản chất &amp; Tác động của Độc quyền Nhà nước</h2>
+          <p style="color: var(--text-soft);">Bốn nguyên nhân hình thành độc quyền nhà nước, bản chất trong chủ nghĩa tư bản và tác động tích cực, tiêu cực.</p>
         </div>
 
-        <div class="theory-grid">
-          <!-- Card 1: Mục đích -->
-          <div class="theory-card reveal">
-            <span class="badge badge-red" style="align-self: flex-start; margin-bottom: 8px;">Mục đích thống trị</span>
-            <h3 class="theory-card-title" style="font-size: 1rem;">Phục vụ lợi ích tư nhân</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.45;">
-              Nhằm phục vụ lợi ích của các tổ chức độc quyền tư nhân và duy trì sự tồn tại của chủ nghĩa tư bản.
-            </p>
+        <div style="display: grid; grid-template-columns: 1.1fr 1.3fr; gap: 16px; align-items: start;">
+          <!-- Cột trái: Điểm 5 & 6 -->
+          <div>
+            <!-- Điểm 5: Nguyên nhân -->
+            <div class="bento-card reveal" style="border-color: var(--line); padding: 12px 16px; margin-bottom: 12px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span class="badge badge-amber" style="background: var(--amber); color: var(--bg); padding: 3px 8px; border-radius: 99px; font-size: 0.65rem; font-weight: bold;">Điểm 5</span>
+                <h3 style="font-size: 0.9rem; margin:0;">4 Nguyên nhân hình thành độc quyền nhà nước</h3>
+              </div>
+              <ul class="detail-list" style="font-size:0.75rem; color:var(--text-soft); padding-left:14px; margin:0;">
+                <li style="margin-bottom: 2px;">Tập trung sản xuất quy mô lớn đòi hỏi điều tiết vĩ mô.</li>
+                <li style="margin-bottom: 2px;">Ngành hạ tầng thiết yếu tư nhân không muốn đầu tư.</li>
+                <li style="margin-bottom: 2px;">Giảm thiểu xung đột bất bình đẳng xã hội.</li>
+                <li>Hỗ trợ doanh nghiệp cạnh tranh trên trường quốc tế.</li>
+              </ul>
+            </div>
+
+            <!-- Điểm 6: Bản chất -->
+            <div class="bento-card reveal" style="border-color: var(--line); padding: 12px 16px; display: grid; grid-template-columns: 1fr 100px; gap: 12px; align-items: center;">
+              <div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span class="badge badge-red" style="background: var(--red); color: white; padding: 3px 8px; border-radius: 99px; font-size: 0.65rem; font-weight: bold;">Điểm 6</span>
+                  <h3 style="font-size: 0.9rem; margin:0;">Bản chất độc quyền nhà nước</h3>
+                </div>
+                <p style="font-size: 0.76rem; color: var(--text-soft); line-height: 1.45; margin:0;">
+                  Là sự phục vụ đắc lực của bộ máy nhà nước đối với các tổ chức độc quyền tư nhân để tối ưu hóa lợi nhuận tài phiệt.
+                </p>
+              </div>
+              <div style="width:100px; height:75px; border-radius:6px; overflow:hidden; border: 1px solid var(--line);">
+                <img src="images/monopoly_factory.png" alt="Nhà máy độc quyền" style="width:100%; height:100%; object-fit:cover;" />
+              </div>
+            </div>
           </div>
 
-          <!-- Card 2: Kết hợp quyền lực -->
-          <div class="theory-card reveal">
-            <span class="badge badge-teal" style="align-self: flex-start; margin-bottom: 8px;">Cơ cấu quyền lực</span>
-            <h3 class="theory-card-title" style="font-size: 1rem;">Kết hợp kinh tế & chính trị</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.45;">
-              Thể hiện sự kết hợp giữa: Quyền lực kinh tế của các tổ chức độc quyền và Quyền lực chính trị của nhà nước.
-            </p>
-          </div>
-
-          <!-- Card 3: Sự phụ thuộc -->
-          <div class="theory-card reveal">
-            <span class="badge badge-amber" style="align-self: flex-start; margin-bottom: 8px;">Quan hệ tài chính</span>
-            <h3 class="theory-card-title" style="font-size: 1rem;">Sự phụ thuộc của nhà nước</h3>
-            <p class="theory-card-desc" style="font-size: 0.82rem; line-height: 1.45;">
-              Sự phụ thuộc ngày càng lớn của nhà nước vào các nhóm tư bản độc quyền.
-            </p>
+          <!-- Cột phải: Tác động tích cực / tiêu cực -->
+          <div class="reveal">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+              <span class="badge badge-teal" style="background: var(--amber); color: var(--bg); padding: 3px 8px; border-radius: 99px; font-size: 0.68rem; font-weight: bold;">Điểm 7 &amp; 8</span>
+              <h3 style="font-size: 0.9rem; margin:0;">Tác động của độc quyền</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div class="bento-card" style="padding:12px 14px; border-top:3px solid var(--amber); border-color: var(--line);">
+                <h4 style="color:var(--amber); font-size:0.8rem; margin-bottom:4px; font-family: var(--font-display);">7. Tích cực ✅</h4>
+                <ul class="detail-list" style="font-size:0.72rem; color:var(--text-soft); padding-left:14px; margin:0;">
+                  <li>Thúc đẩy nghiên cứu khoa học, cải tiến kỹ thuật.</li>
+                  <li>Tăng năng suất nhờ quy mô sản xuất lớn.</li>
+                  <li>Hiện đại hóa cơ cấu kinh tế.</li>
+                </ul>
+              </div>
+              <div class="bento-card" style="padding:12px 14px; border-top:3px solid var(--red); border-color: var(--line);">
+                <h4 style="color:var(--red); font-size:0.8rem; margin-bottom:4px; font-family: var(--font-display);">8. Tiêu cực ⚠️</h4>
+                <ul class="detail-list" style="font-size:0.72rem; color:var(--text-soft); padding-left:14px; margin:0;">
+                  <li>Lũng đoạn thị trường, áp đặt giá cả bất hợp lý.</li>
+                  <li>Kìm hãm sự sáng tạo do vị thế thống trị.</li>
+                  <li>Gia tăng bất bình đẳng phân phối.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: TÁC ĐỘNG CỦA ĐỘC QUYỀN (Grid layout, Dark Theme) -->
-    <section id="tac-dong" class="snap-section theme-dark">
-      <div class="container">
-        <div class="section-heading center reveal">
-          <span class="section-label">04 · Tác động của Độc quyền</span>
-          <h2>5. Tác động tích cực & tiêu cực của độc quyền</h2>
-          <p>
-            Độc quyền mang bản chất hai mặt kinh tế, tác động đa chiều đến sự phát triển của xã hội.
-          </p>
-        </div>
-
-        <div class="bento-grid" style="grid-template-cols: 1fr 1fr;">
-          <!-- Tích cực -->
-          <div class="bento-card reveal" style="border-top: 4px solid var(--teal);">
-            <h3><span style="color: var(--teal);">■</span> 7. Tác động tích cực</h3>
-            <ul class="detail-list" style="margin-top: 8px; font-size: 0.82rem;">
-              <li><strong>Thúc đẩy KH-KT:</strong> Do có vốn lớn, có khả năng đầu tư vào nghiên cứu, phát minh và ứng dụng công nghệ mới.</li>
-              <li><strong>Tăng năng suất lao động:</strong> Ứng dụng công nghệ hiện đại, tổ chức sản xuất lớn, giảm chi phí và nâng cao năng lực cạnh tranh.</li>
-              <li><strong>Thúc đẩy sản xuất lớn hiện đại:</strong> Tập trung nguồn lực tài chính, đầu tư vào các ngành trọng điểm, phát triển nền sản xuất quy mô lớn.</li>
-            </ul>
-          </div>
-
-          <!-- Tiêu cực -->
-          <div class="bento-card reveal" style="border-top: 4px solid var(--red);">
-            <h3><span style="color: var(--red);">■</span> 8. Tác động tiêu cực</h3>
-            <ul class="detail-list" style="margin-top: 8px; font-size: 0.82rem;">
-              <li><strong>Cạnh tranh không hoàn hảo:</strong> Áp đặt giá bán cao, giá mua thấp, hạn chế sản lượng, tạo cung cầu giả tạo, gây thiệt hại xã hội.</li>
-              <li><strong>Kìm hãm tiến bộ kỹ thuật:</strong> Các tổ chức độc quyền có thể không muốn đổi mới nếu điều đó đe dọa vị thế độc quyền của họ.</li>
-              <li><strong>Gia tăng phân hóa giàu nghèo:</strong> Chính sách kinh tế - xã hội có thể phục vụ lợi ích của thiểu số thay vì đa số nhân dân lao động.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: THỰC TIỄN VIỆT NAM (Comparison Cards Deck, Dark Theme) -->
-    <section id="thuc-tien-vn" class="snap-section theme-dark">
+    <!-- ============================================================
+         SLIDE 4: PHẦN 2: VINH — SO SÁNH LÝ LUẬN VỚI THỰC TIỄN
+    ============================================================ -->
+    <section id="thuc-tien-vn" class="snap-section snap-slide theme-paper" data-slide-title="Phần 2: So sánh" data-presenter="Vinh">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="section-label">05 · Thực tiễn Việt Nam</span>
-          <h2>6. Đối chiếu lý luận với thực tiễn Việt Nam</h2>
-          <p>
-            Phân tích điểm khác biệt bản chất của các tập đoàn kinh tế nhà nước Việt Nam trong nền kinh tế thị trường định hướng XHCN.
-          </p>
+          <span class="section-label" style="color: var(--red);">Phần 2</span>
+          <h2 style="color: var(--ink);">So sánh lý luận với thực tiễn các tập đoàn kinh tế nhà nước</h2>
         </div>
 
-        <!-- Comparison Cards Deck -->
-        <div class="comparison-deck reveal">
-          <!-- Cột CNTB -->
-          <div class="comparison-column column-left">
-            <div class="comparison-title-wrap">
-              <span style="color: var(--red);">Chủ nghĩa tư bản</span>
-              <h3>Độc quyền Nhà nước</h3>
+        <div style="display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: center;" class="reveal">
+          <div style="background: var(--paper-card); border: 2px solid var(--red); border-radius: 16px; padding: 20px 24px; box-shadow: 0 10px 30px rgba(218, 37, 29, 0.08);">
+            
+            <!-- Điểm tương đồng -->
+            <div style="margin-bottom: 16px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="color: var(--red); font-size: 1.1rem;">★</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); margin:0; font-weight:700;">Về điểm tương đồng</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; margin: 0; text-align: justify;">
+                Theo lý luận, độc quyền nhà nước nắm giữ các ngành kinh tế then chốt, đầu tư vào các lĩnh vực cần vốn lớn và là công cụ điều tiết nền kinh tế. Thực tế ở Việt Nam, các tập đoàn như <strong>(EVN - Điện lực, PVN - Dầu khí, Tập đoàn Công nghiệp Than - Khoáng sản)</strong> đang thực hiện đúng vai trò này thông qua việc đảm bảo an ninh năng lượng, đầu tư hạ tầng và bình ổn thị trường.
+              </p>
             </div>
-            <p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-soft); padding-top: 10px;">
-              Hình thành nhằm phục vụ lợi ích của các tổ chức độc quyền tư nhân và tiếp tục duy trì, phát triển chủ nghĩa tư bản.
-            </p>
+
+            <!-- Dải phân cách mỏng vàng -->
+            <div style="height: 1px; background: rgba(255, 205, 0, 0.4); margin: 14px 0;"></div>
+
+            <!-- Điểm khác biệt -->
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="color: var(--amber); font-size: 1.1rem;">★</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); margin:0; font-weight:700;">Về điểm khác biệt</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; margin: 0; text-align: justify;">
+                Trong chủ nghĩa tư bản, độc quyền nhà nước chủ yếu phục vụ lợi ích của các tập đoàn tư nhân. Còn ở Việt Nam, các doanh nghiệp nhà nước thuộc sở hữu toàn dân, do Nhà nước quản lý và hoạt động vì lợi ích của nhân dân, đồng thời giữ vai trò chủ đạo trong định hướng phát triển nền kinh tế.
+              </p>
+            </div>
+
           </div>
 
-          <!-- Cột Việt Nam -->
-          <div class="comparison-column column-right">
-            <div class="comparison-title-wrap">
-              <span style="color: var(--teal);">Việt Nam (KTTT định hướng XHCN)</span>
-              <h3>Tập đoàn kinh tế Nhà nước</h3>
-            </div>
-            <p style="font-size: 0.88rem; line-height: 1.5; color: var(--ink-soft); padding-top: 10px;">
-              Thuộc sở hữu toàn dân, do Nhà nước làm đại diện chủ sở hữu, hoạt động nhằm phục vụ lợi ích của nhân dân, quốc gia, dân tộc và đóng vai trò "chủ đạo" để định hướng nền kinh tế.
-            </p>
-          </div>
-        </div>
-
-        <!-- 3 Điểm tương đồng giữa lý luận và thực tiễn -->
-        <h3 style="margin-top: 36px; font-family: var(--font-display); font-size: 1.2rem; text-align: center;"><span style="color: var(--teal);">■</span> 1. Điểm tương đồng giữa lý luận và thực tiễn</h3>
-        <div class="bento-grid" style="grid-template-rows: auto; margin-top: 16px;">
-          <div class="bento-card reveal">
-            <div class="bento-card-num">01</div>
-            <h3>Chiếm lĩnh các lĩnh vực then chốt</h3>
-            <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-soft);">
-              Các Tập đoàn kinh tế nhà nước (EVN - Điện lực, PVN - Dầu khí, TKV - Than Khoáng sản) nắm giữ những ngành công nghiệp cốt lõi, bảo đảm an ninh năng lượng và huyết mạch quốc gia.
-            </p>
-          </div>
-          <div class="bento-card reveal">
-            <div class="bento-card-num">02</div>
-            <h3>Đầu tư lĩnh vực tư nhân không làm</h3>
-            <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-soft);">
-              DNNN đóng vai trò chủ đạo xây dựng kết cấu hạ tầng (đường sắt, cơ sở hạ tầng viễn thông vùng sâu vùng xa, công trình điện lưới quốc gia).
-            </p>
-          </div>
-          <div class="bento-card reveal">
-            <div class="bento-card-num">03</div>
-            <h3>Công cụ điều tiết vĩ mô</h3>
-            <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-soft);">
-              DNNN là lực lượng vật chất quan trọng để Nhà nước điều tiết, bình ổn thị trường và ứng phó với khủng hoảng.
-            </p>
+          <!-- Cột phải: Hình thực tiễn VN -->
+          <div style="border-radius: 12px; overflow: hidden; border: 2px solid var(--red); box-shadow: var(--shadow); height: 320px;">
+            <img src="images/vietnam_heavy_industry.png" alt="Thực tiễn Việt Nam" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: HẠN CHẾ & NGUY CƠ TẠI VIỆT NAM (Accordions, Paper Theme) -->
-    <section id="han-che-vn" class="snap-section theme-paper">
+    <!-- ============================================================
+         SLIDE 5: PHẦN 3: NHÂN — VAI TRÒ & NGUY CƠ
+    ============================================================ -->
+    <section id="han-che-vn" class="snap-section snap-slide theme-dark" data-slide-title="Phần 3: Vai trò &amp; Nguy cơ" data-presenter="Nhân">
       <div class="container">
         <div class="section-heading center reveal">
-          <span class="section-label">06 · Hạn chế & Nguy cơ</span>
-          <h2>7. Nguy cơ Độc quyền & sự Kém hiệu quả tại Việt Nam</h2>
-          <p>
-            Các rủi ro và bài học thực tiễn cần khắc phục khi doanh nghiệp nhà nước nắm giữ vị thế thống trị ngành.
-          </p>
+          <span class="section-label" style="color: var(--amber);">Phần 3</span>
+          <h2>Phân tích Vai trò &amp; Nguy cơ của Doanh nghiệp Nhà nước tại Việt Nam</h2>
+          <p style="color: var(--text-soft);">Các rủi ro, hạn chế và bài học thực tiễn cần khắc phục khi doanh nghiệp nhà nước nắm giữ vị thế thống trị ngành.</p>
         </div>
 
-        <!-- Accordions (Khác biệt hoàn toàn cách hiển thị card của trang cũ) -->
-        <div class="accordion-wrapper reveal">
-          <!-- Accordion 1 -->
-          <div class="accordion-item">
-            <button class="accordion-header" type="button" aria-expanded="false">
-              <div class="accordion-title-block">
-                <span class="accordion-num">01</span>
-                <span class="accordion-title" style="color: var(--ink);">Áp đặt giá cả và thiệt hại cho người tiêu dùng</span>
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: center;" class="reveal">
+          <!-- Cột Trái: Accordions -->
+          <div class="accordion-wrapper">
+            <div class="accordion-item" style="border-color: var(--line); margin-bottom: 8px;">
+              <button class="accordion-header" type="button" aria-expanded="false">
+                <div class="accordion-title-block">
+                  <span class="accordion-num" style="color: var(--amber);">01</span>
+                  <span class="accordion-title">Áp đặt giá cả &amp; Thiệt hại cho người tiêu dùng</span>
+                </div>
+                <span class="accordion-icon" style="color: var(--amber);">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner" style="font-size:0.78rem; line-height:1.5; color: var(--text-soft); padding: 0 16px 16px 44px;">
+                  <strong>Lý luận kinh tế:</strong> Tổ chức độc quyền áp đặt mức giá bán cao hơn giá trị thực tế, hạn chế sản lượng để tối đa hóa lợi ích nhóm, gây thiệt hại phúc lợi người tiêu dùng.<br>
+                  <strong>Thực tiễn Việt Nam:</strong> Một số doanh nghiệp nhà nước nắm vị thế độc quyền tự nhiên ở ngành thiết yếu (như truyền tải điện, nước sạch) dễ nảy sinh nguy cơ áp đặt biểu giá phi thị trường, khi chất lượng dịch vụ hoặc quy trình minh bạch chưa hoàn toàn tương xứng.
+                </div>
               </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner" style="font-size: 0.85rem; line-height: 1.45;">
-                Lý luận cảnh báo tổ chức độc quyền thường áp đặt giá bán cao, gây thiệt hại cho xã hội. Thực tiễn: Việc một số DNNN giữ thế độc quyền (như phân phối điện, nước sạch) khiến người tiêu dùng không có quyền lựa chọn nhà cung cấp, đôi khi phải chịu mức giá hoặc dịch vụ chưa tương xứng.
+            </div>
+            <div class="accordion-item" style="border-color: var(--line); margin-bottom: 8px;">
+              <button class="accordion-header" type="button" aria-expanded="false">
+                <div class="accordion-title-block">
+                  <span class="accordion-num" style="color: var(--amber);">02</span>
+                  <span class="accordion-title">Kìm hãm cải tiến kỹ thuật &amp; Hiệu quả sản xuất thấp</span>
+                </div>
+                <span class="accordion-icon" style="color: var(--amber);">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner" style="font-size:0.78rem; line-height:1.5; color: var(--text-soft); padding: 0 16px 16px 44px;">
+                  <strong>Lý luận kinh tế:</strong> Do không phải đối mặt trực tiếp với áp lực cạnh tranh sinh tử trên thị trường tự do, độc quyền có xu hướng thủ tiêu động lực cải tiến kỹ thuật và đổi mới công nghệ.<br>
+                  <strong>Thực tiễn Việt Nam:</strong> Một số doanh nghiệp nhà nước có tâm lý ỷ lại vào ngân sách và sự bảo hộ của Nhà nước, dẫn tới hiệu quả đầu tư thấp, đầu tư ngoài ngành dàn trải, làm thất thoát nguồn lực tài chính lớn (tiêu biểu như các bài học lịch sử của tập đoàn Vinashin, Vinalines).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" style="border-color: var(--line);">
+              <button class="accordion-header" type="button" aria-expanded="false">
+                <div class="accordion-title-block">
+                  <span class="accordion-num" style="color: var(--amber);">03</span>
+                  <span class="accordion-title">Nguy cơ xuất hiện "Nhóm lợi ích" và hiện tượng Tham nhũng</span>
+                </div>
+                <span class="accordion-icon" style="color: var(--amber);">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner" style="font-size:0.78rem; line-height:1.5; color: var(--text-soft); padding: 0 16px 16px 44px;">
+                  <strong>Lý luận kinh tế:</strong> Sự độc quyền và độc quyền nhà nước tạo ra các đặc quyền kinh tế khép kín, dễ bị các nhóm lợi ích thao túng và bẻ cong các chính sách điều tiết vĩ mô có lợi cho lợi ích cá nhân.<br>
+                  <strong>Thực tiễn Việt Nam:</strong> Cơ chế giám sát, quản trị nội bộ tại một số tổng công ty nhà nước chưa chặt chẽ làm xuất hiện hành vi tham nhũng, lãng phí và lũng đoạn chính sách quản lý tài sản chung, tạo ra môi trường cạnh tranh bất bình đẳng với khu vực kinh tế tư nhân.
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Accordion 2 -->
-          <div class="accordion-item">
-            <button class="accordion-header" type="button" aria-expanded="false">
-              <div class="accordion-title-block">
-                <span class="accordion-num">02</span>
-                <span class="accordion-title" style="color: var(--ink);">Kìm hãm tiến bộ kỹ thuật và kém hiệu quả</span>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner" style="font-size: 0.85rem; line-height: 1.45;">
-                Độc quyền có thể kìm hãm sự tiến bộ kỹ thuật do thiếu áp lực cạnh tranh. Thực tiễn ở Việt Nam: Một số DNNN có tâm lý ỷ lại vào bao cấp, chậm đổi mới công nghệ, dẫn đến năng suất lao động thấp, đầu tư dàn trải gây thất thoát vốn (như các đại án kinh tế trong quá khứ tại Vinashin, Vinalines).
-              </div>
-            </div>
-          </div>
-
-          <!-- Accordion 3 -->
-          <div class="accordion-item">
-            <button class="accordion-header" type="button" aria-expanded="false">
-              <div class="accordion-title-block">
-                <span class="accordion-num">03</span>
-                <span class="accordion-title" style="color: var(--ink);">Nguy cơ "nhóm lợi ích"</span>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner" style="font-size: 0.85rem; line-height: 1.45;">
-                Khi độc quyền nhà nước bị chi phối bởi nhóm lợi ích cục bộ, nó sẽ chi phối các quan hệ kinh tế vì lợi ích nhóm. Việc quản trị nội bộ yếu kém tại một số tập đoàn nhà nước có thể dẫn đến tham nhũng, lũng đoạn và làm méo mó môi trường cạnh tranh bình đẳng với khu vực kinh tế tư nhân.
-              </div>
-            </div>
+          <!-- Cột Phải: Hình ảnh Lực lượng SX & Công nghệ -->
+          <div style="border-radius: 12px; overflow: hidden; border: 2px solid var(--amber); box-shadow: var(--shadow); height: 260px;">
+            <img src="images/economic_governance_risk.png" alt="Cách mạng Công nghệ" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7: CÔNG CỤ & KIỂM CHỨNG AI (Bento Grid học thuật, Dark Theme) -->
-    <section id="cong-cu" class="snap-section support-section theme-dark">
+    <!-- ============================================================
+         SLIDE 6: BÁO CÁO SỬ DỤNG AI + TÀI LIỆU THAM KHẢO (CHUNG)
+    ============================================================ -->
+    <section id="bao-cao" class="snap-section snap-slide theme-paper" data-slide-title="Báo cáo AI &amp; Tài liệu" data-presenter="">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-label">07 · Báo cáo học thuật</span>
-          <h2>8. Báo cáo sử dụng công cụ AI & Kiểm chứng nguồn</h2>
-          <p>
-            Công bố liêm chính học thuật và kê khai chi tiết mức độ can thiệp của AI trong sản phẩm thuyết trình.
+        <div class="section-heading center reveal" style="margin-bottom: 16px;">
+          <span class="section-label" style="color: var(--red);">Phần 4</span>
+          <h2 style="color: var(--ink);">Báo cáo sử dụng công cụ AI &amp; Cam kết liêm chính</h2>
+        </div>
+
+        <!-- 4.1: Bảng sử dụng AI & Tài liệu tham khảo -->
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; margin-bottom: 20px;" class="reveal">
+          <!-- Trái: Bảng kê khai -->
+          <div>
+            <span class="section-label" style="color: var(--red); font-size: 0.7rem; margin-bottom: 6px; display: block;">4.1 · Kê khai công cụ</span>
+            <div class="tool-table-wrap" style="border: 1px solid var(--dark-line); border-radius: 8px; overflow: hidden;">
+              <table class="tool-table" style="color: var(--ink); font-size: 0.74rem; width: 100%;">
+                <thead>
+                  <tr style="background: var(--red); color: white;">
+                    <th style="width:30px; text-align:center; padding: 6px;">STT</th>
+                    <th style="padding: 6px;">Công cụ AI</th>
+                    <th style="padding: 6px;">Mục đích sử dụng</th>
+                    <th style="padding: 6px;">Chỉnh sửa của sinh viên</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background: var(--paper-card);">
+                    <td style="text-align:center; font-weight:bold; padding: 6px;">1</td>
+                    <td style="padding: 6px;"><span class="tool-badge" style="background: var(--red); color: white; padding: 1px 4px; border-radius: 3px; font-weight: bold; font-size: 0.65rem;">NotebookLM</span></td>
+                    <td style="padding: 6px;">Phân tích &amp; tóm tắt tài liệu</td>
+                    <td style="padding: 6px;">Lọc bỏ phần lý thuyết không liên quan đề tài</td>
+                  </tr>
+                  <tr style="background: var(--paper-soft);">
+                    <td style="text-align:center; font-weight:bold; padding: 6px;">2</td>
+                    <td style="padding: 6px;"><span class="tool-badge" style="background: var(--amber); color: var(--bg); padding: 1px 4px; border-radius: 3px; font-weight: bold; font-size: 0.65rem;">Gemini</span></td>
+                    <td style="padding: 6px;">Tổng hợp dữ liệu doanh nghiệp nhà nước</td>
+                    <td style="padding: 6px;">Đối chiếu giáo trình lý luận, tinh giản đưa vào slide</td>
+                  </tr>
+                  <tr style="background: var(--paper-card);">
+                    <td style="text-align:center; font-weight:bold; padding: 6px;">3</td>
+                    <td style="padding: 6px;"><span class="tool-badge" style="background: var(--bg-card); color: var(--amber); border: 1px solid var(--amber); padding: 1px 4px; border-radius: 3px; font-weight: bold; font-size: 0.65rem;">Antigravity</span></td>
+                    <td style="padding: 6px;">Hỗ trợ code frontend (CSS, JS) và sửa lỗi hiển thị</td>
+                    <td style="padding: 6px;">Điều chỉnh màu sắc, tối ưu responsive, căn chỉnh độ tương phản</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Phải: Tài liệu tham khảo -->
+          <div>
+            <span class="section-label" style="color: var(--red); font-size: 0.7rem; margin-bottom: 6px; display: block;">Tài liệu tham khảo</span>
+            <div style="background: var(--paper-card); border: 1px solid var(--dark-line); border-radius: 8px; padding: 10px 14px; min-height: 110px;">
+              <ol class="reference-list" style="color: var(--ink-soft); font-size: 0.74rem; padding-left: 14px; margin: 0; line-height: 1.45;">
+                <li class="reference-item" style="margin-bottom: 4px;">
+                  Bộ Giáo dục và Đào tạo. <strong>Giáo trình Kinh tế Chính trị Mác – Lênin</strong>. Nhà xuất bản Chính trị Quốc gia Sự thật, 2021.
+                </li>
+                <li class="reference-item" style="margin-bottom: 4px;">
+                  Đảng Cộng sản Việt Nam. <strong>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII</strong>. Nhà xuất bản Chính trị Quốc gia Sự thật, 2021.
+                </li>
+                <li class="reference-item">
+                  V.I. Lênin. <strong>Chủ nghĩa đế quốc, giai đoạn tột cùng của chủ nghĩa tư bản</strong>.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hàng dưới: Cam kết thực hành liêm chính học thuật -->
+        <div class="reveal" style="background: var(--paper-card); border: 1px solid var(--dark-line); border-radius: 8px; padding: 14px 20px; margin-top: 10px;">
+          <span class="section-label" style="color: var(--red); font-size: 0.72rem; margin-bottom: 6px; display: block; font-weight: 800;">Cam kết thực hành liêm chính học thuật</span>
+          <ul class="detail-list" style="font-size: 0.76rem; color: var(--ink-soft); margin: 0; padding-left: 14px; line-height: 1.5;">
+            <li style="margin-bottom: 4px;"><strong>Minh bạch công cụ:</strong> Kê khai trung thực các công cụ trí tuệ nhân tạo (NotebookLM, Gemini, Antigravity) đã hỗ trợ nhóm tóm tắt tài liệu và viết code frontend.</li>
+            <li><strong>Tính tự lực:</strong> Nội dung bài thuyết trình được chuẩn bị dựa trên nội dung bài học và giáo trình Kinh tế chính trị Mác - Lênin chính thống.</li>
+          </ul>
+        </div>
+      </section>
+
+    <!-- ============================================================
+         SLIDE 7: CẢM ƠN
+    ============================================================ -->
+    <section id="cam-on" style="position: relative; overflow: hidden;" class="snap-section snap-slide theme-dark" data-slide-title="Cảm ơn" data-presenter="">
+      <!-- Full-Bleed Watermark Background: Trống đồng Đông Sơn -->
+      <img src="images/dong_son_drum.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.12; z-index: 1; pointer-events: none; filter: brightness(0.6) contrast(1.1);" />
+      <!-- Dark Vignette Overlay -->
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle, rgba(28, 2, 2, 0.4) 0%, var(--bg) 85%); z-index: 1.5; pointer-events: none;"></div>
+
+      <div class="container" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 40px 0;">
+        <div class="reveal" style="text-align: center; max-width: 680px; margin: 0 auto; background: rgba(28, 2, 2, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.15); box-shadow: var(--shadow);">
+          <span class="section-label" style="margin-bottom: 16px; color: var(--amber);">Chuyên đề học tập</span>
+          <h2 style="font-family:var(--font-display); font-size: clamp(2.2rem, 5vw, 4rem); font-weight:900; line-height:1.1; letter-spacing:-0.02em; margin-bottom:16px;">
+            Xin chân thành<br>
+            <span style="color: var(--amber);">cảm ơn!</span>
+          </h2>
+          <p style="font-family:var(--font-serif); font-size:0.95rem; color:var(--text-soft); margin:0 auto 24px; line-height:1.6;">
+            Chúng em xin trân trọng cảm ơn thầy/cô và các bạn đã lắng nghe.<br>Nhóm rất mong nhận được ý kiến đóng góp và phản hồi.
           </p>
-        </div>
-
-        <!-- Bảng kê khai sử dụng AI (Mục 8.1) -->
-        <h3 style="margin-top: 24px; font-family: var(--font-display); font-size: 1.2rem; text-align: center;"><span style="color: var(--teal);">■</span> 8.1. Bảng phân định sử dụng AI</h3>
-        <div class="tool-table-wrap reveal">
-          <table class="tool-table">
-            <thead>
-              <tr>
-                <th style="width: 60px; text-align: center;">STT</th>
-                <th style="width: 150px;">Công cụ AI</th>
-                <th style="width: 250px;">MỤC ĐÍCH SỬ DỤNG</th>
-                <th style="width: 200px;">PROMPT CHÍNH</th>
-                <th style="width: 200px;">KẾT QUẢ</th>
-                <th>CHỈNH SỬA CỦA SV</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align: center; font-weight: bold;">1</td>
-                <td><span class="tool-badge badge-red">NotebookLM</span></td>
-                <td>Phân tích và tổng hợp nội dung liên quan đến chủ đề thuyết trình</td>
-                <td>“Tóm tắt nội dung chương 4”</td>
-                <td>Bản tóm chương 4</td>
-                <td>Lọc bỏ nội dung lý thuyết không liên quan đến đề tài</td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: bold;">2</td>
-                <td><span class="tool-badge badge-teal">Gemini</span></td>
-                <td>Tổng hợp thông tin về Nhà nước Việt Nam của doanh nghiệp Nhà nước Việt Nam và phải lấy thông tin từ nguồn có uy tín</td>
-                <td>“Phân tích vai trò và nguy cơ”</td>
-                <td>Bản phân tích theo yêu cầu</td>
-                <td>Đối chiếu với lý thuyết, tìm ra đúng ý, đưa vào slide.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Block 1: 8.2. Kiểm chứng thông tin AI bằng nguồn chính thống -->
-        <h3 style="margin-top: 36px; font-family: var(--font-display); font-size: 1.2rem; text-align: center;"><span style="color: var(--teal);">■</span> 8.2. Kiểm chứng thông tin AI bằng nguồn chính thống</h3>
-        <div class="academic-row-stack reveal">
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <span style="color: var(--amber);">■</span> Giáo trình LLCT
+          
+          <!-- Thành viên -->
+          <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-bottom:24px;">
+            <div style="text-align:center;">
+              <div style="width:40px; height:40px; border-radius:50%; background: var(--red); border: 2px solid var(--amber); margin:0 auto 6px; display:flex; align-items:center; justify-content:center; font-size:1rem; color: var(--amber); font-weight: bold;">★</div>
+              <strong style="font-size:0.85rem;">Hội</strong>
             </div>
-            <div class="academic-row-item-desc">
-              Toàn bộ nội dung lý luận được đối chiếu với <strong>Giáo trình Triết học Mác – Lênin</strong> (NXB Chính trị Quốc gia Sự thật, 2021).
+            <div style="text-align:center;">
+              <div style="width:40px; height:40px; border-radius:50%; background: var(--red); border: 2px solid var(--amber); margin:0 auto 6px; display:flex; align-items:center; justify-content:center; font-size:1rem; color: var(--amber); font-weight: bold;">★</div>
+              <strong style="font-size:0.85rem;">Bảo</strong>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:40px; height:40px; border-radius:50%; background: var(--red); border: 2px solid var(--amber); margin:0 auto 6px; display:flex; align-items:center; justify-content:center; font-size:1rem; color: var(--amber); font-weight: bold;">★</div>
+              <strong style="font-size:0.85rem;">Vinh</strong>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:40px; height:40px; border-radius:50%; background: var(--red); border: 2px solid var(--amber); margin:0 auto 6px; display:flex; align-items:center; justify-content:center; font-size:1rem; color: var(--amber); font-weight: bold;">★</div>
+              <strong style="font-size:0.85rem;">Nhân</strong>
             </div>
           </div>
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <span style="color: var(--amber);">■</span> Nghị quyết & Văn bản
-            </div>
-            <div class="academic-row-item-desc">
-              Các luận điểm về KTTT định hướng XHCN được kiểm chứng qua <strong>Văn kiện Đại hội XIII</strong> của Đảng Cộng sản Việt Nam.
-            </div>
-          </div>
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <span style="color: var(--amber);">■</span> Chịu trách nhiệm
-            </div>
-            <div class="academic-row-item-desc">
-              Nhóm sinh viên <strong>chịu hoàn toàn trách nhiệm</strong> về nội dung cuối cùng được trình bày trên trang web này.
-            </div>
-          </div>
-        </div>
-
-        <!-- Block 2: 8.3. AI chỉ đóng vai trò hỗ trợ, không thay thế toàn bộ -->
-        <h3 style="margin-top: 36px; font-family: var(--font-display); font-size: 1.2rem; text-align: center;"><span style="color: var(--teal);">■</span> 8.3. AI chỉ đóng vai trò hỗ trợ, không thay thế toàn bộ</h3>
-        <div class="academic-split reveal">
-          <div class="academic-split-column">
-            <strong style="color: var(--teal); font-size: 1.05rem; display: block; margin-bottom: 8px;">AI hỗ trợ</strong>
-            <ul class="detail-list" style="font-size: 0.85rem;">
-              <li>Tạo bản thảo bố cục HTML ban đầu</li>
-              <li>Gợi ý CSS styles và animations</li>
-              <li>Tạo hình ảnh minh họa trang trí</li>
-              <li>Hỗ trợ tóm tắt nội dung lý luận</li>
-            </ul>
-          </div>
-          <div class="academic-split-divider">≠</div>
-          <div class="academic-split-column">
-            <strong style="color: var(--amber); font-size: 1.05rem; display: block; margin-bottom: 8px;">Sinh viên thực hiện</strong>
-            <ul class="detail-list" style="font-size: 0.85rem;">
-              <li>Nghiên cứu và biên soạn nội dung chuyên sâu</li>
-              <li>Thiết kế lại giao diện theo ý tưởng nhóm</li>
-              <li>Đối chiếu, kiểm chứng mọi thông tin</li>
-              <li>Quyết định bố cục, trình bày cuối cùng</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Block 3: 8.4. Cam kết và phân định rõ ràng -->
-        <h3 style="margin-top: 36px; font-family: var(--font-display); font-size: 1.2rem; text-align: center;"><span style="color: var(--teal);">■</span> 8.4. Cam kết và phân định rõ ràng</h3>
-        <div class="academic-row-stack reveal">
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#43b4a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="background: rgba(67, 180, 165, 0.1); border-radius: 50%; padding: 4px; display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span style="display: inline-block; vertical-align: middle;">Cam kết bằng văn bản</span>
-            </div>
-            <div class="academic-row-item-desc" style="font-style: italic;">
-              Nhóm sinh viên cam kết: "Chúng tôi không để AI làm thay hoàn toàn bất kỳ phần nội dung nào. Mọi nội dung học thuật đều được nhóm nghiên cứu, biên soạn và chịu trách nhiệm."
-            </div>
-          </div>
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#43b4a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="background: rgba(67, 180, 165, 0.1); border-radius: 50%; padding: 4px; display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span style="display: inline-block; vertical-align: middle;">Phân định rõ AI output & phần SV chỉnh sửa</span>
-            </div>
-            <div class="academic-row-item-desc">
-              Bảng AI Usage ở mục 8.1 đã liệt kê chi tiết: cột <strong>"Kết quả AI"</strong> là output gốc, cột <strong>"Chỉnh sửa của SV"</strong> là phần nhóm biên tập lại.
-            </div>
-          </div>
-          <div class="academic-row-item">
-            <div class="academic-row-item-title">
-              <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#43b4a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="background: rgba(67, 180, 165, 0.1); border-radius: 50%; padding: 4px; display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span style="display: inline-block; vertical-align: middle;">Đối chiếu nguồn chính thống</span>
-            </div>
-            <div class="academic-row-item-desc">
-              Mọi thông tin do AI sinh ra đều được đối chiếu với: <strong>Giáo trình LLCT, Văn kiện Đại hội XIII</strong>, và các văn bản pháp luật hiện hành của Nhà nước Việt Nam.
-            </div>
-          </div>
+          
+          <blockquote style="font-family:var(--font-serif); font-style:italic; font-size:0.85rem; color:var(--text-soft); border-left:3px solid var(--amber); padding-left:12px; text-align:left; max-width:440px; margin:0 auto;">
+            "Độc quyền là sản phẩm trực tiếp và tất yếu của sự phát triển cao của tích tụ sản xuất."<br>
+            <cite style="font-style:normal; font-size:0.75rem; color:var(--amber); margin-top:4px; display:block;">— V.I. Lênin</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8: TÀI LIỆU THAM KHẢO (Paper Theme) -->
-    <section id="tai-lieu" class="snap-section theme-paper">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-label">08 · Tài liệu tham khảo</span>
-          <h2>Nguồn tham khảo chính</h2>
-        </div>
-        <ol class="reference-list reveal" style="color: var(--ink-soft);">
-          <li class="reference-item">
-            Bộ Giáo dục và Đào tạo. <strong>Giáo trình Triết học Mác – Lênin</strong>. NXB Chính trị Quốc gia Sự thật, 2021.
-          </li>
-          <li class="reference-item">
-            Đảng Cộng sản Việt Nam. <strong>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII</strong>. NXB Chính trị Quốc gia Sự thật, 2021.
-          </li>
-          <li class="reference-item">
-            V.I. Lênin. <strong>Chủ nghĩa đế quốc, giai đoạn tột cùng của chủ nghĩa tư bản</strong>. Toàn tập, NXB Chính trị Quốc gia Sự thật.
-          </li>
-          <li class="reference-item">
-            Tư liệu báo cáo tài chính và hoạt động xã hội của EVN, Petrolimex, Vietcombank giai đoạn 2021-2025.
-          </li>
-        </ol>
-      </div>
-    </section>
   </main>
 
   <button class="back-to-top" type="button" aria-label="Lên đầu trang">↑</button>
 
-  <!-- Footer -->
+  <!-- Slide Controller -->
+  <div class="slide-controller" id="slideController" aria-hidden="true">
+    <div class="slide-controller-inner" style="border-color: var(--line);">
+      <button class="slide-nav-btn" id="prevSlideBtn" aria-label="Slide trước">&#8592;</button>
+      <div class="slide-counter">
+        <span id="slideCurrentNum" style="color: var(--amber);">1</span>
+        <span class="slide-counter-sep">/</span>
+        <span id="slideTotalNum">7</span>
+        <span class="slide-counter-title" id="slideCurrentTitle" style="color: var(--text-soft); border-left-color: var(--line);">Giới thiệu</span>
+      </div>
+      <button class="slide-nav-btn" id="nextSlideBtn" aria-label="Slide sau">&#8594;</button>
+      <button class="slide-exit-btn" id="exitPresentBtn" aria-label="Thoát trình chiếu">✕ Thoát</button>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand" style="color: var(--red);">Độc quyền & Độc quyền Nhà nước</div>
-      <div class="footer-copyright">© 2026 · Triết học Mác – Lênin · Đề tài thuyết trình nhóm</div>
-      <a class="footer-top-link" href="#hero">Quay lại đầu trang ↑</a>
+      <div class="footer-brand" style="color:var(--amber);">Độc quyền &amp; Độc quyền Nhà nước</div>
+      <div class="footer-copyright">© 2026 · Kinh tế Chính trị Mác – Lênin</div>
+      <a class="footer-top-link" href="#hero" style="color: var(--amber);">↑ Đầu trang</a>
     </div>
   </footer>
 
